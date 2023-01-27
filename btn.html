@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Generator</title>
+    <link rel="icon" href="/HTML/images/CCS_LOGO-removebg-preview.png">
+
+    <!-- fonts -->
+    
+    <!-- source code for CSS -->
+    <link rel="stylesheet" href="btn.css">
+
+    <!-- plus icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- source code for font/styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- container for whole content -->
+    <nav class="nav_title">
+        <div class="title">
+            <span>CCS Button Generator</span>
+        </div>
+    </nav>
+    <div class="main_container" id="main_container">
+        <!-- wrapper to position the content in main-container  -->
+        <div class="main_settings_wrapper">
+            <!-- this container is to keep the all the title bar aligned -->
+            <div class="title">Settings</div>
+            <div class="container_for_settings" id="container_for_settings">
+                <div class="title_bar_container">
+                    <!-- ito yung part na pinipindot para lumabas yung settings for adjustment -->
+                    <div id="font_text_title" class="title-bar .text">
+                        <p>
+                            Font/Text
+                        </p>
+                        <span id="text_icon" class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+                    <div class="btn-content" id="font_text_settings">
+                        <div class="input_container">
+                            <div id="font-text-container" class="settings_container ">
+                                <label for="text_input">
+                                    <span>
+                                        Text:
+                                    </span>
+                                    <input id="text_input" type="text" placeholder="Type here">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-container">
+                            <div>
+                                <input type="checkbox" id="disabling_checkbox_for_font_styles" >
+                            </div>
+                            <div id="disabled_font_styles" class="disabled_font_styles">
+                                <label for="font-styles">
+                                    <span>
+                                        Font Styles:
+                                    </span>
+                                </label>
+                                <select name="font-family" id="font-styles">
+                                    <option value="poppins">
+                                        Poppins
+                                    </option>
+                                    <option value="san-serif">
+                                        San-serif
+                                    </option>
+                                    <option value="roboto">
+                                        Roboto
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input_container">
+                            <label for="font_color_output">
+                                <span>
+                                    Font Color:
+                                </span>
+                                <input id="font_color_output" type="text" value="#000000" maxlength="7" >
+                                <input id="font_color_picker" type="color" >
+                            </label>
+                        </div>
+                        <div class="input_container">
+                            <label for="font_size_output">
+                                <span>
+                                    Font Size: 
+                                </span>
+                                <input type="text" id="font_size_output"  value="30">
+                                <input id="font_size_range" type="range" min="0" max="60" step="1" value="30">
+                            </label>
+                        </div>
+                        <div class="input-container">
+                            <div class="disabling_checkbox_for_textshadow">
+                                <input type="checkbox" id="checkbox_for_disabling_textshadow" >
+                            </div>
+                            <div class="disabling_container_for_textshadow" id="disabling_container_for_textshadow">
+                                <div>
+                                    <label for="text_shadow_color_output">
+                                        <span>
+                                            Text Shadow: 
+                                        </label>
+                                        </span>
+                                        <input type="text" id="text_shadow_color_output" value="#000000" maxlength="7">
+                                        <input type="color" id="text_shadow_color_picker">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="xOutput">
+                                        <span>
+                                            x: 
+                                        </span>
+                                        <input type="number" id="xOutput"  value="15">
+                                        <input type="range" id="xRange" min="0" max="30" step="1" value="50%">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="yOutput">
+                                        <span>
+                                            y: 
+                                        </span>
+                                        <input type="number" id="yOutput"  value="15">
+                                        <input type="range" id="yRange"  min="0" max="30" step="1" value="50%">
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="blurOutput">
+                                        <span>
+                                            blur: 
+                                        </span>
+                                        <input type="number" id="blurOutput"  value="15" >
+                                        <input type="range" id="blurRange" min="0" max="30" step="1" value="50%">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Settings for shadow  -->
+                <div class="title-bar-container">
+                    <div id="btn-shadow" class="title-bar">
+                        <p>
+                            Shadow
+                        </p>
+                        <span id="shadow_icon" class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+                    <div class="btn-content" id="btn-content-shadow">
+                        <div class="container_for_box_shadow">
+                            <div class="disabling_checkbox_for_box_shadow">
+                                <input type="checkbox" id="disabling_checkbox_for_box_shadow"> 
+                            </div>
+                            <div class="disabling_container_for_box_shadow" id="disabling_container_for_box_shadow">
+                                <div class="setting_container">
+                                    <span>
+                                        Box shadow:
+                                    </span>
+                                    <input type="text"id="boxShadowColOut" value="#000000" maxlength="7 " >
+                                    <input type="color" id="shadowCol">
+                                </div>
+                                <div class="setting_container">
+                                    <span>
+                                        x:
+                                    </span>
+                                    <input type="number"id="x_axis_output" value="15">
+                                    <input type="range" id="xAxisRange" min="0" max="30" value="50%" step="1"> 
+                                </div>
+                                <div class="setting_container">
+                                    <span>
+                                        y:
+                                    </span>
+                                    <input type="number"id="y_axis_output" value="15">
+                                    <input type="range" id="yAxisRange" min="0" max="30" value="50%" step="1">
+                                </div>
+                                <div class="setting_container">
+                                    <span>
+                                        blur:
+                                    </span>
+                                    <input type="number"id="blur_axis_output" value="15">
+                                    <input type="range" id="blurAxis" min="0" max="30" value="50%" step="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container_for_padding">
+                            <div class="disabling_checkbox_for_all_padding">
+                                <input type="checkbox" id="disabling_checkbox_for_all_padding" >
+                            </div>
+                            <div id="disabling_container_for_all_padding" class="disabling_container_for_all_padding">
+                                <span>
+                                    Padding:
+                                </span>
+                                <input type="text"id="paddingAllSide" value="20" max="40">
+                                <input type="range" id="paddingRangeAll" min="0" max="40" value="50%" step="1">
+                            </div>
+                        </div>
+                        <div class="disabling_container" id="disabling_all_container_for_sides_of_padding">
+                            <div class="container_for_padding">
+                                <div class="disabling_checkbox_for_padding_top">
+                                    <input type="checkbox" id="disabling_checkbox_for_padding_top" >
+                                </div>
+                                <div id="disabling_container_for_padding_top" class="disabling_sub_container">
+                                    <span>
+                                        Padding-top:
+                                    </span>
+                                    <input type="number"id="paddingTopOut" value="20">
+                                    <input type="range" id="paddingTopRange" min="0" max="40" value="50%" step="1">
+                                </div>
+                            </div>
+                            <div class="container_for_padding">
+                                <div class="disabling_checkbox_padding_left">
+                                    <input type="checkbox" id="disabling_checkbox_for_padding_left" >
+                                </div>
+                                <div id="disabling_container_for_padding_left" class="disabling_sub_container">
+                                    <span>
+                                        Padding-left:
+                                    </span>
+                                    <input type="number"id="paddingLeftOut" value="20">
+                                    <input type="range" id="paddingLeftRange" min="0" max="40" value="50%" step="1">
+                                </div>
+                            </div>
+                            <div class="container_for_padding">
+                                <div class="disabling_checkbox_for_padding_bottom">
+                                    <input type="checkbox" id="disabling_checkbox_for_padding_bottom" >
+                                </div>
+                                <div id="disabling_container_for_padding_bottom" class="disabling_sub_container">
+                                    <span>
+                                        Padding-bottom:
+                                    </span>
+                                    <input type="number"id="paddingBotOut" value="20">
+                                    <input type="range" id="paddingBotRange" min="0" max="40" value="50%" step="1">
+                                </div>
+                            </div>
+                            <div class="container_for_padding">
+                                <div class="disabling_checkbox_for_padding_right">
+                                    <input type="checkbox" id="disabling_checkbox_for_padding_right" >
+                                </div>
+                                <div id="disabling_container_for_padding_right" class="disabling_sub_container">
+                                    <span>
+                                        Padding-right:
+                                    </span>
+                                    <input type="number"id="paddingRightOut" value="20">
+                                    <input type="range" id="paddingRightRange" min="0" max="40" value="50%" step="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-bar-container">
+                    <div id="btn-border" class="title-bar">
+                        <p>
+                            Border
+                        </p>
+                        <span id="icon-border" class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+                    <div  class="btn-content" id="btn-content-border-btn">
+                        <div class="input-container" id="input-container">
+                            <input type="checkbox" id="disabling_checkbox_for_border_radius">
+                            <div style="pointer-events: none; opacity: .6;" id="disabling_container_for_border_radius" class="disabling_container">
+                                <label for="borderRadiusOutput">
+                                    <span>
+                                        Border Radius:
+                                    </span>
+                                    <input id="borderRadiusOutput" type="number" value="30">
+                                    <input id="borderRadiusRange" type="range" value="50%" min="0" max="60" step="1" >
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-container" id="input-container">
+                            <input type="checkbox" id="disabling_checkbox_for_border" >
+                            <div style="pointer-events: none; opacity: .6;" id="disabling_container_for_border" class="disabling_container">
+                                <div id="font-text-container" class="settings_container ">
+                                    <span>
+                                        Border style:
+                                    </span>
+                                    <select name="Border_style_all" id="border_style_all">
+                                        <option value="Solid">
+                                            Solid
+                                        </option>
+                                        <option value="Dotted">
+                                            Dotted
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="setting_container">
+                                    <label for="borderColorOutput">
+                                        <span>
+                                            Border Color:
+                                        </span>
+                                        <input id="borderColorOutput" type="text" value="#000000" maxlength="7">
+                                        <input id="borderColorPicker" type="color" value="#000000">
+                                    </label>
+                                </div>
+                                <div id="font-text-container" class="settings_container ">
+                                    <label for="borderWidthOutput">
+                                        <span>
+                                            Border width:
+                                        </span>
+                                        <input id="borderWidthOutput" type="number" value="10">
+                                        <input id="borderWidthRange" type="range" value="50%" min="0" max="20" step="1">
+                                    </label>
+                                </div> 
+                            </div> 
+                            <div>
+                                <span id="moreSettingsForBorderStyle" class="more">
+                                    more
+                                </span>
+                            </div>
+                        </div>
+                        <div class="main_container_for_additional_settings_for_border_styles" id="main_container_for_additional_settings_for_border_styles">
+                            <div id="disabling_container_for_whole_addtional_settings_of_border" class="disabling_main_container">
+                                <div>
+                                    <input type="checkbox" id="disabling_checkbox_for_border_top">
+                                </div>
+                                <div class="disabling_sub_container" id="disabling_container_for_border_top">
+                                    <div class="settings_container ">
+                                        <label for="border_styles_top">
+                                            <span>
+                                                Border-top-styles:
+                                            </span>
+                                            <select name="border_styles_top" id="border_styles_top">
+                                                <option value="Solid">
+                                                    Solid
+                                                </option>
+                                                <option value="Dotted">
+                                                    Dotted
+                                                </option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                    <div class="settings_container ">
+                                        <span> 
+                                            Border-top:
+                                        </span>
+                                        <input id="border_top_color_output_for_button" type="text" value="#000000" maxlength="7">
+                                        <input id="border_top_color_picker_for_button" type="color">
+                                    </div>
+                                    <div class="settings_container ">
+                                        <span>
+                                            Border-top-width:
+                                        </span>
+                                        <input id="border_top_width_output_for_button" type="number" value="10">
+                                        <input id="border_top_width_range_for_button" type="range" value="50%" min="0" max="20" step="1" >
+                                    </div> 
+                                </div>
+                                <div id="disabling_container_for_whole_addtional_settings_of_border" class="disabling_main_container">
+                                    <div>
+                                        <input type="checkbox" id="disabling_checkbox_for_border_right">
+                                    </div>
+                                    <div class="disabling_sub_container" id="disabling_container_for_border_right">
+                                        <div class="settings_container">
+                                            <label for="border_right_styles">
+                                                Border-right-styles:
+                                            </label>
+                                            <select name="border_styles_top" id="border_right_styles">
+                                                <option value="Solid">
+                                                    Solid
+                                                </option>
+                                                <option value="Dotted">
+                                                    Dotted
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="settings_container ">
+                                            <label for="border_right_color_output_for_button">
+                                                Border-right-color:
+                                            </span>
+                                            <input id="border_right_color_output_for_button" type="text" value="#000000" maxlength="7">
+                                            <input id="border_right_color_picker_for_button" type="color">
+                                        </div>
+                                        <div class="settings_container ">
+                                            <label for="border_right_width_output_for_button">
+                                                Border-right-width:
+                                            </label>
+                                            <input id="border_right_width_output_for_button" type="number" value="10">
+                                            <input id="border_right_width_range_for_button" type="range" value="50%" min="0" max="20" step="1" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="disabling_container_for_whole_addtional_settings_of_border" class="disabling_main_container">
+                                    <div>
+                                        <input type="checkbox" id="disabling_checkbox_for_border_bottom">
+                                    </div>
+                                    <div class="disabling_sub_container" id="disabling_container_for_border_bottom">
+                                        <div class="settings_container ">
+                                            <span>
+                                                Border-bottom-styles:
+                                            </span>
+                                            <select name="border_styles_top" id="border_styles_bottom">
+                                                <option value="Solid">
+                                                    Solid
+                                                </option>
+                                                <option value="Dotted">
+                                                    Dotted
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div  class="settings_container ">
+                                            <span>
+                                                Border-bottom-color:
+                                            </span>
+                                            <input id="border_bottom_color_picker_output_for_button" type="text" value="#000000" maxlength="7">
+                                            <input id="border_bottom_color_picker_for_button" type="color">
+                                        </div>
+                                        <div class="settings_container ">
+                                            <span>
+                                                Border-bottom-width:
+                                            </span>
+                                            <input id="border_bottom_width_output_for_button" type="number" value="10">
+                                            <input id="border_bottom_width_range_for_button" type="range" value="50%" min="0" max="20" step="1" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="disabling_container_for_whole_addtional_settings_of_border" class="disabling_main_container">
+                                    <div>
+                                        <input type="checkbox" id="disabling_checkbox_for_border_left">
+                                    </div>
+                                    <div class="disabling_sub_container" id="disabling_container_for_border_left">
+                                        <div class="settings_container ">
+                                            <span>
+                                                Border-left-styles:
+                                            </span>
+                                            <select name="border_left_style" id="border_left_styles">
+                                                <option value="Solid">
+                                                    Solid
+                                                </option>
+                                                <option value="Dotted">
+                                                    Dotted
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="settings_container ">
+                                            <span>
+                                                Border-left-color:
+                                            </span>
+                                            <input id="border_left_color_output_for_button" type="text" value="#000000" maxlength="7">
+                                            <input id="border_left_color_picker_for_button" type="color">
+                                        </div>
+                                        <div class="settings_container ">
+                                            <span>
+                                                Border-left-width:
+                                            </span>
+                                            <input id="border_left_width_output_for_button" type="number" value="10">
+                                            <input id="border_left_width_range_for_button" type="range" value="50%" min="0" max="20" step="1" >
+                                        </div>  
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="title-bar-container">
+                        <div id="btn-background" class="title-bar">
+                            <p>
+                                Background
+                            </p>
+                            <span id="icon-background" class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </div>
+                        <div class="btn-content" id="btn-content-background">
+                            <div class="input-container" id="input-container">
+                                <input type="radio" name="background_color" id="background_button_gradient" value="gradient" checked>
+                                <label for="background_button_gradient">Gradient</label>
+                            </div>
+                            <div class="input-container" id="input-container">
+                                <input type="radio" name="background_color" id="background_button_solid" value="solid">
+                                <label for="background_button_solid">Solid</label>
+                            </div>
+                            <div class="container_solid_value" id="container_solid_value">
+                                <label for="solid_background_output">
+                                    <span>
+                                        Background Color
+                                    </span>
+                                    <input type="text" value="#000000" id="solid_background_output" maxlength="7">
+                                    <input type="color" value="#000000" id="solid_background_value">
+                                </label>
+                            </div>
+                            <div class="container_for_gradient_value" id="background_gradient_value_container">
+                                <div class="container_for_color_of_button_background">
+                                    <label for="first_color_picker_value_for_gradient_color">
+                                        <span>
+                                            First Color
+                                        </span>
+                                        <input type="text" id="first_color_picker_output_value_for_gradient_color" value="#000000" maxlength="7">
+                                    </label>
+                                    <label for="range_value_for_gradient_color">
+                                        <input type="color" id="first_color_picker_value_for_gradient_color">
+                                    </label>
+                                </div>
+                                <div class="container_for_color_of_button_back">
+                                    <label for="second_color_picker_output_for_gradient_color">
+                                        <span>
+                                            Second Color
+                                        </span>
+                                        <input type="text" id="second_color_picker_output_for_gradient_color" value="#000000" maxlength="7">
+                                    </label>
+                                    <label for="second_color_picker_value_for_gradient_color">
+                                        <input type="color" id="second_color_picker_value_for_gradient_color" min="10" max="360" step="10" value="50%">
+                                    </label>
+                                </div>
+                                <div class="container_for_color_of_button_back">
+                                    <label for="output_value_for_gradient_degree_color">
+                                        <span>
+                                            Gradient Degree
+                                        </span>
+                                        <input type="number" id="output_value_for_gradient_degree_color" value="180deg">
+                                    </label>
+                                    <label for="range_value_for_gradient_color">
+                                        <input type="range" id="range_value_for_gradient_color" min="10" max="360" step="5" value="50%">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="title-bar-container">
+                        <div id="hover_settings" class="title-bar">
+                            <p>
+                                Hover
+                            </p>
+                            <span id="icon-background" class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </div>
+                        <div class="hover_settings_content" id="hover_settings_content">
+                            <div class="container_for_disabling_checkbox_for_hover">
+                                <input type="checkbox" id="disabling_checkbox_for_hover">
+                            </div>
+                            <div style="opacity: .6; pointer-events: none;" id="container_to_disabled_hover_color">
+                                <div class="to_aligned_the_title">
+                                    <div class="input-container">
+                                        <span>Background:</span>
+                                    </div>
+                                    <div class="input-container" id="input-container">
+                                        <input type="radio" name="background_color_for_hover" id="radio_for_hover_background_gradient_color" value="gradient" checked>
+                                        <label for="radio_for_hover_background_gradient_color">Gradient</label>
+                                    </div>
+                                    <div class="input-container" id="input-container">
+                                        <input type="radio" name="background_color_for_hover" id="radio_for_hover_background_solid_color" value="solid">
+                                        <label for="radio_for_hover_background_solid_color">Solid</label>
+                                    </div>
+                                </div>
+                                <div class="container_hover_background_solid_color" id="container_hover_background_solid_color">
+                                    <label for="solid_color_picker_output_for_hover_background_solid_color">
+                                        <span>
+                                            Solid Color
+                                        </span>
+                                        <input type="text" value="#000000" id="solid_color_picker_output_for_hover_background_solid_color" maxlength="7">
+                                        <input type="color" value="#000000" id="solid_color_picker_for_hover_background_solid_color">
+                                    </label>
+                                </div>
+                                <div class="container_of_hover_background_for_gradient_color" id="container_of_hover_background_for_gradient_color">
+                                    <div class="container_hover_background_gradient_color">
+                                        <label for="first_color_picker_output_for_hover_background_gradient_color">
+                                            <span>
+                                                First Color
+                                            </span>
+                                            <input type="text" id="first_color_picker_output_for_hover_background_gradient_color" value="#2FA4FF" maxlength="7">
+                                        </label>
+                                        <label for="first_color_picker_for_hover_background_gradient_color">
+                                            <input type="color" id="first_color_picker_for_hover_background_gradient_color"  value="#2FA4FF">
+                                        </label>
+                                    </div>
+                                    <div class="container_hover_background_gradient_color">
+                                        <label for="second_color_picker_output_for_hover_background_gradient_color">
+                                            <span>
+                                                Second Color
+                                            </span>
+                                            <input type="text" id="second_color_picker_output_for_hover_background_gradient_color" value="#2FA4FF" maxlength="7">
+                                        </label>
+                                        <label for="second_color_picker_for_hover_background_gradient_color">
+                                            <input type="color" id="second_color_picker_for_hover_background_gradient_color" value="#2FA4FF">
+                                        </label>
+                                    </div>
+                                    <div class="container_hover_background_gradient_color">
+                                        <label for="range_output_for_hover_gradient_degree">
+                                            <span>
+                                                Gradient Degree
+                                            </span>
+                                            <input type="text" id="range_output_for_hover_background_gradient_degree" value="180" maxlength="3">
+                                        </label>
+                                        <label for="range_for_hover_background_gradient_degree">
+                                            <input type="range" id="range_for_hover_background_gradient_degree" min="10" max="360" step="5" value="50%">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container_for_main_btn">
+            <div class="title">Button Preview</div>
+            <div class="container_for_output_btn" id="container_for_output_btn">
+                <div class="button-wrapper">
+                    <button id="button" class="button1">
+                        <p id="text-in-btn">
+                            Click me
+                        </p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_container_for_codes">
+        <div class="container_for_copy_button">
+            <span class="">
+                Copy Code
+            </span>
+            <span id="copy_button" class="material-symbols-outlined">
+                content_copy
+            </span>
+        </div>
+        <div class="parent_container_for_code" id="parent_container_for_code">
+            <div class="code_for_btn" id="code_for_btn">
+                <div class="">
+                .btn {
+                    <div style="height: 0px; visibility: hidden;" class="child_container" id="child_container_font_styles">
+                        <span class="value">
+                            font-family: <span id="code_for_font_styles"></span>;
+                        </span>
+                    </div>
+                    <div class="child_container" id="child_container_font_color">
+                        <span class="value">
+                            font-color: <span id="code_for_font_color"></span>;
+                        </span>
+                    </div>
+                    <div class="child_container" id="child_container_font_size">
+                        <span class="value">
+                            font-size: <span id="code_for_font_size"></span>;
+                        </span> 
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="child_container" id="child_container_text_shadow">
+                        <span class="value">
+                            text-shadow: 
+                            <span id="x_code_for_text_shadow"></span>,
+                            <span id="y_code_for_text_shadow"></span>,
+                            <span id="blur_code_for_text_shadow"></span>,
+                            <span id="color_code_for_text_shadow"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="child_container" id="child_container_box_shadow">
+                        <span class="value">
+                            box-shadow: 
+                            <span id="x_code_for_box_shadow"></span>,
+                            <span id="y_code_for_box_shadow"></span>,
+                            <span id="blur_code_for_box_shadow"></span>,
+                            <span id="color_code_for_box_shadow"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;"  class="child_container" id="child_container_padding">
+                        <span class="value">
+                            padding: 
+                            <span id="code_for_padding"></span>;
+                        </span>
+                    </div>                                                                                                                                                                                                                                                                                                                      
+                    <div style="height: 0px; visibility: hidden;" class="child_container" id="child_container_padding_top">
+                        <span class="value">
+                            padding-top: 
+                            <span id="code_for_top_padding"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;"  class="child_container" id="child_container_padding_right">
+                        <span class="value">
+                            padding-right: 
+                            <span id="code_for_right_padding"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;"  class="child_container" id="child_container_padding_bottom">
+                        <span class="value">
+                            padding-bottom: 
+                            <span id="code_for_bottom_padding"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="child_container" id="child_container_padding_left">
+                        <span class="value">
+                            padding-left: 
+                            <span id="code_for_left_padding"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="child_container" id="child_container_border_radius">
+                        <span class="value">
+                            border-radius: 
+                            <span id="code_for_border_radius"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="" id="child_container_border">
+                        <span class="value">
+                            border: 
+                            <span id="code_for_border_width"></span>,
+                            <span id="code_for_border_style"></span>,
+                            <span id="code_for_border_color"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="" id="child_container_border_top">
+                        <span class="value">
+                            border-top: 
+                            <span id="code_for_border_top_width"></span>,
+                            <span id="code_for_border_top_style"></span>,
+                            <span id="code_for_border_top_color"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="" id="child_container_border_right">
+                        <span class="value">
+                            border-right: 
+                            <span id="code_for_border_right_width"></span>,
+                            <span id="code_for_border_right_style"></span>,
+                            <span id="code_for_border_right_color"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="" id="child_container_border_bottom">
+                        <span class="value">
+                            border-bottom: 
+                            <span id="code_for_border_bottom_width"></span>,
+                            <span id="code_for_border_bottom_style"></span>,
+                            <span id="code_for_border_bottom_color"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="" id="child_container_border_left">
+                        <span class="value">
+                            border-left: 
+                            <span id="code_for_border_left_width"></span>,
+                            <span id="code_for_border_left_style"></span>,
+                            <span id="code_for_border_left_color"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" class="" id="child_container_solid_color">
+                        <span class="value">
+                            background-color: 
+                            <span id="code_for_solid_color"></span>,
+                        </span>
+                    </div>
+                    <div  id="child_container_gradient_color">
+                        <div id="">
+                            <span class="value">
+                                background-image: -webkit-linear-gradient(
+                                <span class="code_for_gradient_degree"></span>, 
+                                <span class="code_for_gradient_first_color"></span>, 
+                                <span class="code_for_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div id="">
+                            <span class="value">
+                                background-image: -moz-linear-gradient(
+                                    <span class="code_for_gradient_degree"></span>, 
+                                    <span class="code_for_gradient_first_color"></span>, 
+                                    <span class="code_for_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div class="" id="">
+                            <span class="value">
+                                background-image: -ms-linear-gradient( 
+                                    <span class="code_for_gradient_degree"></span>, 
+                                    <span class="code_for_gradient_first_color"></span>, 
+                                    <span class="code_for_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div  class="" id="">
+                            <span class="value">
+                                background-image: -o-linear-gradient( 
+                                    <span class="code_for_gradient_degree"></span>, 
+                                    <span class="code_for_gradient_first_color"></span>, 
+                                    <span class="code_for_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div class="" id="">
+                            <span class="value">
+                                background-image: linear-gradient(
+                                    <span class="code_for_gradient_degree"></span>, 
+                                    <span class="code_for_gradient_first_color"></span>, 
+                                    <span class="code_for_gradient_second_color"></span>);
+                                </span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>  
+            <div class="">
+                .btn:hover {
+                    <div style="height: 0px; visibility: hidden;" class="child_container_solid_background_of_hover">
+                        <span class="value">
+                            background-color: 
+                            <span class="code_for_hover_solid_color"></span>;
+                        </span>
+                    </div>
+                    <div style="height: 0px; visibility: hidden;" id="child_container_gradient_color_of_hover">
+                        <div id="">
+                            <span class="value">
+                                background-image: -webkit-linear-gradient(
+                                <span class="code_for_hover_gradient_degree"></span>, 
+                                <span class="code_for_hover_gradient_first_color"></span>, 
+                                <span class="code_for_hover_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div id="">
+                            <span class="value">
+                                background-image: -moz-linear-gradient(
+                                    <span class="code_for_hover_gradient_degree"></span>, 
+                                    <span class="code_for_hover_gradient_first_color"></span>, 
+                                    <span class="code_for_hover_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div class="" id="">
+                            <span class="value">
+                                background-image: -ms-linear-gradient( 
+                                    <span class="code_for_hover_gradient_degree"></span>, 
+                                    <span class="code_for_hover_gradient_first_color"></span>, 
+                                    <span class="code_for_hover_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div  class="" id="">
+                            <span class="value">
+                                background-image: -o-linear-gradient( 
+                                    <span class="code_for_hover_gradient_degree"></span>, 
+                                    <span class="code_for_hover_gradient_first_color"></span>, 
+                                    <span class="code_for_hover_gradient_second_color"></span>);
+                            </span>
+                        </div>
+                        <div class="" id="">
+                            <span class="value">
+                                background-image: linear-gradient(
+                                    <span class="code_for_hover_gradient_degree"></span>, 
+                                    <span class="code_for_hover_gradient_first_color"></span>, 
+                                    <span class="code_for_hover_gradient_second_color"></span>);
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+
+    <!-- source code for JS -->
+    <script src="btn.js"></script>
+    
+</html>

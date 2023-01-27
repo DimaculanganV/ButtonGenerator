@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav_title {
+    width: 100%;
+    height: 75px;
+    background-color: #121212;
+    color: #fff;
+    padding: 15px;
+}
+
+.nav_title .title {
+    margin-left: 150px;
+}
+
+.main_container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.main_container 
+.main_settings_wrapper {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+.main_container 
+.main_settings_wrapper 
+.container_for_settings {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    background-color: rgba(242, 242, 242, 0.7);
+    border: 1.5px solid black;
+    border-bottom: none;
+}
+
+.main_settings_wrapper 
+.container_for_settings
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.main_settings_wrapper 
+.container_for_settings 
+.title-bar:hover {
+    background-color: rgb(133, 133, 133);
+} 
+
+
+select{
+    outline: none;
+    cursor: pointer;
+}
+select:hover {
+    background-color: #ccc;
+}
+
+option {
+    background-color: #FFF;
+}
+
+input[type="color"], 
+input[type="text"], 
+input[type="radio"], 
+input[type="range"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+input[type="text"] {
+    outline: none;
+    cursor: text;
+}
+input[type="text"]:hover {
+    background-color: #ccc;
+}
+input[type="text"]:focus {
+    background-color: #ccc;
+}
+
+.disabling_container_for_textshadow {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: start;
+}
+
+.disabling_checkbox_for_textshadow {
+    align-self: start;
+    margin-top: 10px;
+}
+
+.container_for_box_shadow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.disabling_checkbox_for_box_shadow {
+    align-self: start;
+    margin-top: 10px;
+}
+
+.container_for_padding {
+    display: flex;
+    flex-direction: row;
+}
+.container_for_padding input[type="checkbox"] {
+    margin-top: 5px;
+}
+.main_settings_wrapper 
+.container_for_settings 
+.btn-content{
+    width: 100%;
+    visibility: hidden;
+    height: 0px;
+}
+
+.input-container input[type="checkbox"] {
+    align-self: start;
+}
+
+.title {
+    font: 600 2rem poppins;
+}
+
+.disabled_font_styles,
+.disabling_container_for_textshadow,
+.disabling_container_for_box_shadow,
+.disabling_container_for_all_padding,
+.disabling_container_for_padding_top,
+.disabling_container_for_padding_left,
+.disabling_container_for_padding_bottom,
+.disabling_container_for_padding_right,
+.disabling_container_for_border,
+.disabling_sub_container{
+    opacity: .6;
+    pointer-events: none;
+}
+
+.disabling_main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.disabling_checkbox_container_for_border_top {
+    align-self: start;
+}
+
+
+/* main button */
+.container_for_main_btn {
+    display: flex;
+    flex-direction: column;
+    right: 145px;
+    top: 100px;
+    position: absolute;
+}
+.container_for_output_btn {
+    border: 1px solid black;
+    width: 450px;
+    height: 200px;
+}
+.container_for_output_btn 
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+.container_for_output_btn 
+.button1 {
+    border: none;
+    max-width: 450px;
+    min-width: 50px;
+    max-height: 200px;
+    min-height: 20px;
+    font-size: 30px;
+    font-family: 'Arial';
+    background-color: blue;
+}
+
+.input-container {
+    display: flex;
+    position: relative;
+}
+
+.more {
+    cursor: pointer;
+    right: 10px;
+    bottom: 5px;
+    position: absolute;
+}
+
+.more:hover {
+    text-decoration: underline;
+}
+
+.main_container_for_additional_settings_for_border_styles {
+    visibility: hidden;
+    height: 0px;
+}
+
+.container_to_aline_the_additional_settings_content {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.container_solid_value {
+    visibility: hidden;
+    height: 0px;
+}
+
+.hover_settings_content {
+    display: flex;
+    column-gap: 15px;
+}
+
+/* title for background hover content */
+.to_aligned_the_title {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.container_hover_background_solid_color {
+    visibility: hidden;
+    height: 0px;
+}
+
+.hover_settings_content {
+    visibility: hidden;
+    height: 0px;
+}
+
+/* CODES */
+.main_container_for_codes {
+    position: relative;
+    left: 150px;
+    top: -100px;
+    max-width: 1000px;
+    max-height: 1000px;
+    border: 2px solid #000;
+}
+
+.container_for_copy_button {
+    width: 100%;
+    height: 50px;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 10px;
+    padding: 0px 15px;
+}
+
+.container_for_copy_button .text {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.container_for_copy_button #copy_button {
+    cursor: pointer;
+}
+
+.container_for_copy_button #copy_button:hover {
+    scale: 1.1;
+}
+
+/* Media Query */ 
+
